@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Topics - BioMind</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .topic-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid;
+        }
+        .topic-card.biology { border-top-color: #6BBF59; }
+        .topic-card.neuroscience { border-top-color: #E74C3C; }
+        .topic-card.psychology { border-top-color: #9B59B6; }
+        .topic-card.wellness { border-top-color: #3498DB; }
+        .topic-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+        }
+        .topic-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        .topic-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--dark-text);
+        }
+        .topic-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+        .topic-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--medium-text);
+        }
+        .topic-list li:last-child { border-bottom: none; }
+        .explore-header {
+            background: linear-gradient(135deg, var(--light-blue) 0%, var(--light-green) 100%);
+            padding: 4rem 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">BioMind</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html" class="active">Explore</a></li>
+                <li><a href="learn.html">Learn</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="explore-header">
+        <div class="container">
+            <h1>Explore Topics</h1>
+            <p class="subtitle">Dive deep into the fascinating world of biology, neuroscience, psychology, and well-being</p>
+        </div>
+    </header>
+
+    <section style="padding: 4rem 0; background: var(--light-gray);">
+        <div class="container">
+            <div class="topics-grid">
+                <div class="topic-card biology">
+                    <div class="topic-icon">🧬</div>
+                    <h2>Biology</h2>
+                    <p>Understand the building blocks of life, from molecular structures to complex organ systems.</p>
+                    <ul class="topic-list">
+                        <li>Cell Biology & Genetics</li>
+                        <li>Human Anatomy & Physiology</li>
+                        <li>Biochemistry Fundamentals</li>
+                        <li>Evolution & Adaptation</li>
+                        <li>Immune System Functions</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card neuroscience">
+                    <div class="topic-icon">🧠</div>
+                    <h2>Neuroscience</h2>
+                    <p>Explore how the brain and nervous system shape our thoughts, emotions, and behaviors.</p>
+                    <ul class="topic-list">
+                        <li>Brain Structure & Function</li>
+                        <li>Neurotransmitters & Signaling</li>
+                        <li>Memory & Learning</li>
+                        <li>Sleep & Circadian Rhythms</li>
+                        <li>Neuroplasticity</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card psychology">
+                    <div class="topic-icon">💭</div>
+                    <h2>Psychology</h2>
+                    <p>Learn about the mind, behavior, emotions, and the science behind human experience.</p>
+                    <ul class="topic-list">
+                        <li>Cognitive Psychology</li>
+                        <li>Emotional Intelligence</li>
+                        <li>Developmental Psychology</li>
+                        <li>Social Behavior & Influence</li>
+                        <li>Personality Theories</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card wellness">
+                    <div class="topic-icon">🌿</div>
+                    <h2>Mental Well-being</h2>
+                    <p>Discover evidence-based strategies for maintaining and improving mental health.</p>
+                    <ul class="topic-list">
+                        <li>Stress Management</li>
+                        <li>Mindfulness & Meditation</li>
+                        <li>Healthy Lifestyle Habits</li>
+                        <li>Building Resilience</li>
+                        <li>Work-Life Balance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 4rem 0; background: var(--white); text-align: center;">
+        <div class="container">
+            <h2>Ready to Learn More?</h2>
+            <p style="margin: 1rem 0 2rem; color: var(--medium-text);">Explore in-depth articles and resources on these fascinating topics</p>
+            <a href="learn.html" class="btn btn-primary">Visit Learning Center</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 BioMind. All rights reserved. | An educational resource for curious minds.</p>
+        </div>
+    </footer>
+</body>
+</html>
