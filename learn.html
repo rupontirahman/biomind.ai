@@ -1,158 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn - BioMind</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .learn-header {
-            background: linear-gradient(135deg, var(--light-blue) 0%, var(--light-green) 100%);
-            padding: 4rem 0;
-            text-align: center;
-        }
-        .articles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        .article-card {
-            background: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .article-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-        }
-        .article-category {
-            padding: 0.5rem 1rem;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .article-category.biology { background: #6BBF59; color: white; }
-        .article-category.neuroscience { background: #E74C3C; color: white; }
-        .article-category.psychology { background: #9B59B6; color: white; }
-        .article-category.wellness { background: #3498DB; color: white; }
-        .article-content {
-            padding: 1.5rem;
-        }
-        .article-content h3 {
-            font-size: 1.4rem;
-            color: var(--dark-text);
-            margin-bottom: 0.75rem;
-        }
-        .article-content p {
-            color: var(--medium-text);
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-        .read-more {
-            color: var(--primary-blue);
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .read-more:hover { text-decoration: underline; }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Learn - BioMind</title>
+ <link rel="stylesheet" href="styles.css">
+ <style>
+ .learn-header {
+ background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+ padding: 4rem 0;
+ text-align: center;
+ color: white;
+ position: relative;
+ overflow: hidden;
+ }
+ .learn-header h1 {
+ font-size: 2.8rem;
+ margin-bottom: 0.5rem;
+ text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+ }
+ .learn-header p {
+ font-size: 1.1rem;
+ opacity: 0.95;
+ }
+ .articles-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+ gap: 2rem;
+ margin: 3rem 0;
+ }
+ .article-card {
+ background: white;
+ border-radius: 15px;
+ padding: 2rem;
+ box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+ transition: all 0.3s ease;
+ border: 2px solid transparent;
+ position: relative;
+ overflow: hidden;
+ }
+ .article-card::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ height: 4px;
+ background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+ }
+ .article-card:hover {
+ transform: translateY(-8px);
+ box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+ border-color: #667eea;
+ }
+ .article-card h3 {
+ font-size: 1.5rem;
+ color: #667eea;
+ margin-bottom: 0.8rem;
+ margin-top: 0.5rem;
+ }
+ .article-card p {
+ color: var(--medium-text);
+ line-height: 1.7;
+ margin-bottom: 1rem;
+ }
+ .article-card img {
+ width: 100%;
+ height: 200px;
+ object-fit: cover;
+ border-radius: 10px;
+ margin-bottom: 1rem;
+ transition: transform 0.3s ease;
+ }
+ .article-card:hover img {
+ transform: scale(1.05);
+ }
+ .article-badge {
+ display: inline-block;
+ background: #667eea;
+ color: white;
+ padding: 0.4rem 0.8rem;
+ border-radius: 20px;
+ font-size: 0.85rem;
+ margin-bottom: 1rem;
+ font-weight: 600;
+ }
+ .read-more {
+ color: #667eea;
+ text-decoration: none;
+ font-weight: 600;
+ transition: color 0.3s ease;
+ }
+ .read-more:hover {
+ color: #764ba2;
+ }
+ </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">BioMind</div>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="explore.html">Explore</a></li>
-                <li><a href="learn.html" class="active">Learn</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </div>
-    </nav>
+ <nav class="navbar">
+ <div class="container">
+ <div class="logo">
+ <span class="logo-icon">🧠</span>BioMind
+ </div>
+ <ul class="nav-menu">
+ <li><a href="index.html">Home</a></li>
+ <li><a href="explore.html">Explore</a></li>
+ <li><a href="learn.html" class="active">Learn</a></li>
+ <li><a href="about.html">About</a></li>
+ </ul>
+ </div>
+ </nav>
 
-    <header class="learn-header">
-        <div class="container">
-            <h1>Learning Center</h1>
-            <p class="subtitle">Evidence-based articles written in clear, accessible language</p>
-        </div>
-    </header>
+ <div class="learn-header">
+ <div class="container">
+ <h1>Learning Center</h1>
+ <p>Deepen your understanding with in-depth articles and resources</p>
+ </div>
+ </div>
 
-    <section style="padding: 4rem 0; background: var(--light-gray);">
-        <div class="container">
-            <div class="articles-grid">
-                <article class="article-card">
-                    <div class="article-category neuroscience">Neuroscience</div>
-                    <div class="article-content">
-                        <h3>How Does Sleep Affect Memory?</h3>
-                        <p>Sleep plays a crucial role in memory consolidation. During different sleep stages, the brain processes and stores information gathered throughout the day. REM sleep is particularly important for procedural memory...</p>
-                        <a href="#" class="read-more">Read Full Article →</a>
-                    </div>
-                </article>
+ <section style="background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 50%, #f0f4ff 100%);">
+ <div class="container">
+ <div class="articles-grid">
+ <div class="article-card">
+ <span class="article-badge">BIOLOGY</span>
+ <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=400&h=200&fit=crop" alt="The Cell">
+ <h3>🧬 The Fundamental Unit of Life</h3>
+ <p>Explore the intricate world of cells, the basic units of all living organisms. Learn about prokaryotic and eukaryotic cells, cellular structures, and how cells perform vital functions.</p>
+ <a href="#" class="read-more">Read More →</a>
+ </div>
 
-                <article class="article-card">
-                    <div class="article-category biology">Biology</div>
-                    <div class="article-content">
-                        <h3>Understanding the Immune System</h3>
-                        <p>The immune system is your body's defense network, consisting of cells, tissues, and organs that work together. It includes two main types: innate immunity (your first line of defense) and adaptive immunity...</p>
-                        <a href="#" class="read-more">Read Full Article →</a>
-                    </div>
-                </article>
+ <div class="article-card">
+ <span class="article-badge">BIOLOGY</span>
+ <img src="https://images.unsplash.com/photo-1576091160550-112173f31c77?w=400&h=200&fit=crop" alt="Genetics">
+ <h3>🧤 Unlocking the Code of Life</h3>
+ <p>Discover the secrets of DNA, genes, and genetic inheritance. Understand how traits are passed down and how modern genetic engineering is revolutionizing medicine and agriculture.</p>
+ <a href="#" class="read-more">Read More →</a>
+ </div>
 
-                <article class="article-card">
-                    <div class="article-category psychology">Psychology</div>
-                    <div class="article-content">
-                        <h3>The Science of Emotions</h3>
-                        <p>Emotions are complex responses involving physiological arousal, subjective feelings, and behavioral expressions. The limbic system, particularly the amygdala, plays a key role in processing emotional information...</p>
-                        <a href="#" class="read-more">Read Full Article →</a>
-                    </div>
-                </article>
+ <div class="article-card">
+ <span class="article-badge">NEUROSCIENCE</span>
+ <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=200&fit=crop" alt="Brain">
+ <h3>🧠 Mapping the Brain</h3>
+ <p>Journey through the human brain and discover the regions responsible for different functions. Learn about lobes, neurotransmitters, and how modern neuroimaging reveals brain activity.</p>
+ <a href="#" class="read-more">Read More →</a>
+ </div>
 
-                <article class="article-card">
-                    <div class="article-category wellness">Well-being</div>
-                    <div class="article-content">
-                        <h3>Mindfulness and Mental Health</h3>
-                        <p>Mindfulness is the practice of present-moment awareness without judgment. Research shows it can reduce stress, improve attention, and enhance emotional regulation through changes in brain structure and function...</p>
-                        <a href="#" class="read-more">Read Full Article →</a>
-                    </div>
-                </article>
+ <div class="article-card">
+ <span class="article-badge">NEUROSCIENCE</span>
+ <img src="https://images.unsplash.com/photo-1536304993881-6f8ee83b31e2?w=400&h=200&fit=crop" alt="Neurons">
+ <h3>⚡ The Brain's Communication System</h3>
+ <p>Understand how neurons communicate through synapses using neurotransmitters. Explore neuroplasticity and how the brain adapts and learns throughout life.</p>
+ <a href="#" class="read-more">Read More →</a>
+ </div>
 
-                <article class="article-card">
-                    <div class="article-category neuroscience">Neuroscience</div>
-                    <div class="article-content">
-                        <h3>Neuroplasticity: The Brain's Ability to Change</h3>
-                        <p>Neuroplasticity refers to the brain's remarkable ability to reorganize itself by forming new neural connections. This process occurs throughout life and is the foundation for learning, recovery from injury...</p>
-                        <a href="#" class="read-more">Read Full Article →</a>
-                    </div>
-                </article>
+ <div class="article-card">
+ <span class="article-badge">PSYCHOLOGY</span>
+ <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=200&fit=crop" alt="Emotions">
+ <h3>💭 Understanding Human Behavior</h3>
+ <p>Explore the science of behavior and cognition. Learn about psychological theories, emotional intelligence, and how our minds shape our interactions with the world.</p>
+ <a href="#" class="read-more">Read More →</a>
+ </div>
 
-                <article class="article-card">
-                    <div class="article-category biology">Biology</div>
-                    <div class="article-content">
-                        <h3>The Human Microbiome</h3>
-                        <p>Your body hosts trillions of microorganisms collectively known as the microbiome. These bacteria, viruses, and fungi play essential roles in digestion, immune function, and even mental health...</p>
-                        <a href="#" class="read-more">Read Full Article →</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
+ <div class="article-card">
+ <span class="article-badge">WELLNESS</span>
+ <img src="https://images.unsplash.com/photo-1506126279646-a697353d3166?w=400&h=200&fit=crop" alt="Mindfulness">
+ <h3>🧘 The Science of Mindfulness</h3>
+ <p>Discover evidence-based mindfulness and meditation practices. Learn how regular mindfulness can reduce stress, improve focus, and enhance overall mental well-being.</p>
+ <a href="#" class="read-more">Read More →</a>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <section style="padding: 3rem 0; background: var(--white); text-align: center;">
-        <div class="container">
-            <p style="color: var(--medium-text); font-style: italic;">Note: All content is for educational purposes only and should not replace professional medical advice.</p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 BioMind. All rights reserved. | An educational resource for curious minds.</p>
-        </div>
-    </footer>
+ <footer>
+ <div class="container">
+ <p>© 2026 BioMind. All rights reserved. | An educational resource for curious minds.</p>
+ </div>
+ </footer>
 </body>
 </html>
