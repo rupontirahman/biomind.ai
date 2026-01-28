@@ -1,151 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About BioMind</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .about-header {
-            background: linear-gradient(135deg, var(--light-blue) 0%, var(--light-green) 100%);
-            padding: 4rem 0;
-            text-align: center;
-        }
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-        .about-content h2 {
-            color: var(--primary-blue);
-            font-size: 2rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-        .about-content p {
-            color: var(--medium-text);
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-        }
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        .value-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .value-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .value-card h3 {
-            color: var(--dark-text);
-            margin-bottom: 0.5rem;
-        }
-        .value-card p {
-            color: var(--medium-text);
-            font-size: 1rem;
-        }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>About BioMind</title>
+ <link rel="stylesheet" href="styles.css">
+ <style>
+ .about-header {
+ background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+ padding: 5rem 0;
+ text-align: center;
+ color: white;
+ position: relative;
+ overflow: hidden;
+ }
+ .about-header h1 {
+ font-size: 3rem;
+ margin-bottom: 1rem;
+ text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+ }
+ .about-header p {
+ font-size: 1.2rem;
+ opacity: 0.95;
+ max-width: 600px;
+ margin: 0 auto;
+ }
+ .about-content {
+ background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 50%, #f0f4ff 100%);
+ padding: 4rem 0;
+ }
+ .about-section {
+ background: white;
+ padding: 3rem;
+ border-radius: 15px;
+ margin: 2rem 0;
+ box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+ border-left: 5px solid #667eea;
+ }
+ .about-section h2 {
+ font-size: 2rem;
+ color: #667eea;
+ margin-bottom: 1.5rem;
+ font-weight: 800;
+ }
+ .about-section p {
+ color: var(--medium-text);
+ line-height: 1.8;
+ font-size: 1rem;
+ margin-bottom: 1rem;
+ }
+ .about-section ul {
+ color: var(--medium-text);
+ line-height: 2;
+ margin-left: 1.5rem;
+ }
+ .about-section li {
+ margin-bottom: 0.5rem;
+ }
+ .team-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ gap: 2rem;
+ margin-top: 2rem;
+ }
+ .team-member {
+ text-align: center;
+ padding: 2rem;
+ background: linear-gradient(135deg, #f3e5ff 0%, #ffe8f5 100%);
+ border-radius: 15px;
+ transition: transform 0.3s ease;
+ }
+ .team-member:hover {
+ transform: translateY(-5px);
+ }
+ .team-member-icon {
+ font-size: 4rem;
+ margin-bottom: 1rem;
+ }
+ .team-member h3 {
+ color: #667eea;
+ margin-bottom: 0.5rem;
+ font-weight: 700;
+ }
+ .team-member p {
+ color: var(--medium-text);
+ font-size: 0.9rem;
+ }
+ </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">BioMind</div>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="explore.html">Explore</a></li>
-                <li><a href="learn.html">Learn</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-            </ul>
-        </div>
-    </nav>
+ <nav class="navbar">
+ <div class="container">
+ <div class="logo">
+ <span class="logo-icon">🧠</span>BioMind
+ </div>
+ <ul class="nav-menu">
+ <li><a href="index.html">Home</a></li>
+ <li><a href="explore.html">Explore</a></li>
+ <li><a href="learn.html">Learn</a></li>
+ <li><a href="about.html" class="active">About</a></li>
+ </ul>
+ </div>
+ </nav>
 
-    <header class="about-header">
-        <div class="container">
-            <h1>About BioMind</h1>
-            <p class="subtitle">Empowering curious minds through accessible science education</p>
-        </div>
-    </header>
+ <div class="about-header">
+ <div class="container">
+ <h1>About BioMind</h1>
+ <p>Empowering curious minds with accessible knowledge about the human body and mind</p>
+ </div>
+ </div>
 
-    <section style="padding: 4rem 0; background: var(--white);">
-        <div class="container">
-            <div class="about-content">
-                <h2>Our Inspiration</h2>
-                <p>BioMind was born from a simple observation: complex scientific concepts often remain locked behind academic jargon, inaccessible to those who need them most. We believe that understanding how our bodies and minds work shouldn't require a medical degree.</p>
-                
-                <p>Everyone deserves to understand the biological and psychological processes that shape their daily experiences. From why we sleep to how memories form, from what emotions really are to how stress affects our bodies—these are questions that touch all of our lives.</p>
+ <section class="about-content">
+ <div class="container">
+ <div class="about-section">
+ <h2>🌟 Our Mission</h2>
+ <p>BioMind is dedicated to democratizing complex scientific knowledge. We believe that everyone deserves access to accurate, engaging information about biology, neuroscience, psychology, and personal well-being.</p>
+ <p>Our goal is to bridge the gap between scientific research and everyday understanding, making these fascinating topics accessible to curious minds of all ages.</p>
+ </div>
 
-                <h2>Our Mission</h2>
-                <p>At BioMind, we bridge the gap between academic research and everyday understanding. We translate complex scientific findings into clear, engaging content that respects both the science and the reader.</p>
-                
-                <p>We promote:</p>
-                <ul style="margin-left: 2rem; color: var(--medium-text); font-size: 1.1rem;">
-                    <li>Evidence-based education accessible to all</li>
-                    <li>Critical thinking about health and well-being</li>
-                    <li>Curiosity-driven learning experiences</li>
-                    <li>Informed decision-making without medical advice</li>
-                </ul>
+ <div class="about-section">
+ <h2>🧪 What We Offer</h2>
+ <ul>
+ <li><strong>Comprehensive Topics:</strong> Explore biology, neuroscience, psychology, and wellness</li>
+ <li><strong>High-Quality Resources:</strong> Articles, visuals, and interactive content</li>
+ <li><strong>Accessible Learning:</strong> Complex concepts explained in simple terms</li>
+ <li><strong>Evidence-Based Information:</strong> All content is backed by scientific research</li>
+ <li><strong>AI-Powered Assistance:</strong> Get answers to your questions instantly</li>
+ </ul>
+ </div>
 
-                <h2>Our Approach</h2>
-                <p>We carefully balance scientific accuracy with readability. Every article is researched, fact-checked, and written to be understood—not memorized. We explain jargon when we use it, provide context for complex ideas, and always emphasize understanding over mere facts.</p>
+ <div class="about-section">
+ <h2>🎉 Why BioMind?</h2>
+ <p><strong>Simplicity:</strong> We break down complex scientific concepts into understandable explanations without losing accuracy.</p>
+ <p><strong>Quality:</strong> Every article and resource is carefully researched and fact-checked.</p>
+ <p><strong>Engagement:</strong> We use visuals, interactive elements, and storytelling to make learning enjoyable.</p>
+ <p><strong>Community:</strong> We're building a community of learners passionate about understanding themselves and the world.</p>
+ </div>
 
-                <p>BioMind is not a substitute for professional medical advice. We're here to educate, inspire curiosity, and help you better understand the amazing biological system you live in every day.</p>
-            </div>
-        </div>
-    </section>
+ <div class="about-section">
+ <h2>👋 Our Team</h2>
+ <div class="team-grid">
+ <div class="team-member">
+ <div class="team-member-icon">🧎</div>
+ <h3>Educators</h3>
+ <p>Passionate teachers and scientists</p>
+ </div>
+ <div class="team-member">
+ <div class="team-member-icon">🙋</div>
+ <h3>Content Experts</h3>
+ <p>Subject matter specialists</p>
+ </div>
+ <div class="team-member">
+ <div class="team-member-icon">🧐</div>
+ <h3>Technologists</h3>
+ <p>AI and web developers</p>
+ </div>
+ <div class="team-member">
+ <div class="team-member-icon">🎨</div>
+ <h3>Designers</h3>
+ <p>User experience creators</p>
+ </div>
+ </div>
+ </div>
 
-    <section style="padding: 4rem 0; background: var(--light-gray);">
-        <div class="container">
-            <h2 style="text-align: center; color: var(--dark-text); margin-bottom: 1rem;">Our Values</h2>
-            <p style="text-align: center; color: var(--medium-text); margin-bottom: 3rem;">The principles that guide everything we do</p>
-            
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">💡</div>
-                    <h3>Curiosity</h3>
-                    <p>We believe questions are the starting point of all learning</p>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">🎯</div>
-                    <h3>Accuracy</h3>
-                    <p>Every claim is backed by scientific evidence</p>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">🌐</div>
-                    <h3>Accessibility</h3>
-                    <p>Science should be understandable to everyone</p>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">❤️</div>
-                    <h3>Ethics</h3>
-                    <p>We never provide medical diagnoses or treatment advice</p>
-                </div>
-            </div>
-        </div>
-    </section>
+ <div class="about-section">
+ <h2>©️ Disclaimer</h2>
+ <p><strong>Educational Purpose Only:</strong> BioMind is an educational platform providing general information about biology, neuroscience, psychology, and well-being. We do not provide medical advice, diagnoses, treatment recommendations, or psychological therapy.</p>
+ <p><strong>Consult Professionals:</strong> If you have specific health, mental health, or medical concerns, please consult qualified healthcare professionals, doctors, therapists, or licensed mental health providers.</p>
+ <p><strong>No Liability:</strong> The information provided on BioMind is for educational purposes only and should not be relied upon as a substitute for professional medical or psychological advice.</p>
+ </div>
+ </div>
+ </section>
 
-    <section style="padding: 4rem 0; background: var(--white); text-align: center;">
-        <div class="container">
-            <h2 style="color: var(--dark-text); margin-bottom: 1rem;">Join Our Learning Community</h2>
-            <p style="color: var(--medium-text); margin-bottom: 2rem;">Start exploring the fascinating science of biology, neuroscience, and psychology today</p>
-            <a href="explore.html" class="btn btn-primary">Explore Topics</a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 BioMind. All rights reserved. | An educational resource for curious minds.</p>
-        </div>
-    </footer>
+ <footer>
+ <div class="container">
+ <p>© 2026 BioMind. All rights reserved. | An educational resource for curious minds.</p>
+ </div>
+ </footer>
 </body>
 </html>
